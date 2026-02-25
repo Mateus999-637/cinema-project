@@ -30,6 +30,16 @@ nav {
 
 }
 
+.links a{
+    color: white;
+    text-decoration: none;
+}
+
+.links a:hover{
+    color: rgba(249, 71, 17, 0.948);
+    text-decoration: underline;
+}
+
 .img-nav {
     width: 200px;
 }
