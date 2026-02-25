@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap');
 
 * {
     margin: 0;
@@ -16,11 +17,13 @@ nav {
 
 }   
 
-.links > p {
+.links > a {
     color: white;
     font-size: 20px;
     font-family: Montserrat;
     font-weight: 550;
+    text-decoration: none;
+    position: relative;
 }
 
 .links {
@@ -30,14 +33,26 @@ nav {
 
 }
 
-.links a{
-    color: white;
-    text-decoration: none;
+.links > a:hover{
+    color:red
 }
 
-.links a:hover{
-    color: rgba(249, 71, 17, 0.948);
-    text-decoration: underline;
+.links > a::after{
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 100%;
+  height: 2px;
+  background-color: red;
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 0.3s ease;
+}
+
+.links > a:hover::after {
+    transform: scaleX(1);
+    
 }
 
 .img-nav {
@@ -63,7 +78,9 @@ nav {
     display: flex;
     align-items: center;
     flex-direction: column;
-    background-image: url("/src/frontend/img/cinema-background.jpg");
+    background-image:
+    linear-gradient(to bottom, rgba(255,255,255,0) 85%, rgb(0, 0, 0) 100%), 
+    url("/src/frontend/img/inicio-images/cinema-background.jpg");
     background-repeat: no-repeat;
     object-fit: cover;
     background-size: cover;
@@ -96,6 +113,55 @@ nav {
 .buttons-hero > .explorar-btn {
     border: 2px solid  rgb(53, 53, 53);
     background-color: rgba(255, 255, 255, 0);
+}
 
+.catalog {
+    background-color: black;
+    height: 700px;
+    padding: 120px 100px;
+}
 
+.catalog > h1 {
+    color: #FFF;
+    font-size: 50px;
+    font-family: Lexend;
+}   
+
+.slide-container {
+    width: 100%;
+    overflow: hidden;
+    margin-top: 60px;
+}
+
+.slide-wrapper {
+    display: flex; 
+    list-style: none;
+    padding: 0px;
+    gap: 40px; 
+}
+
+.slide {
+    width: 250px;
+}
+
+.img-caption {
+    width: 100%;
+    color: #ffffff;
+    font-family: Lexend;
+    font-size: 22px;
+    margin-top: 30px;
+    line-height: 1.4;
+    
+}
+
+.img-wrapper {
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.img-wrapper > img {
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+    display: block;
 }

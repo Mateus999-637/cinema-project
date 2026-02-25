@@ -7,10 +7,8 @@
 
 body {
     background-image: linear-gradient(to bottom,rgb(57, 2, 2), black );
-    object-fit: cover;
     background-size: cover;
-    width: 100vw;
-    height: 100vh;
+    height: 100vh; 
 }
 
 main {
