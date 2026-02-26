@@ -58,6 +58,10 @@ nav {
     
 }
 
+.visually-hidden {
+    display: none;
+}
+
 .img-nav {
     width: 200px;
 }
@@ -119,12 +123,12 @@ nav {
     background-color: rgba(255, 255, 255, 0);
 }
 
-.catalog {
+main {
     background-color: black;
     padding: 280px 100px 50px 100px;
 }
 
-.catalog > h1 {
+.title-catalog, .title-cinema {
     color: #FFF;
     font-size: 50px;
     font-family: Lexend;
@@ -134,6 +138,7 @@ nav {
     width: 100%;
     overflow: hidden;
     margin-top: 60px;
+    margin-bottom: 400px;
 }
 
 .slide-wrapper {
@@ -169,6 +174,7 @@ nav {
 .img-wrapper {
     border-radius: 10px;
     overflow: hidden;
+    transition: transform ease 0.2s;
 }
 
 .img-wrapper > img {
@@ -176,7 +182,23 @@ nav {
     height: 320px;
     object-fit: cover;
     display: block;
+
 }
+
+.img-wrapper:hover {
+    transform: scale(1.05);
+    transition: margin-bottom ease-in 0.1s;
+}
+
+.slide-container:hover {
+    overflow: visible;
+}
+
+.img-wrapper:hover {
+    margin-bottom: 20px;
+
+}
+
 
 @keyframes animacao {
 
@@ -191,9 +213,14 @@ nav {
 
 }
 
-.scroll-text, .slide-container  {
-    animation: animacao linear both;
+.title-catalog,
+.slide-container {
+    animation-name: animacao;
+    animation-timing-function: linear;
+    animation-fill-mode: both;
     animation-timeline: scroll();
-    animation-range: entry 0% entry 100%;
-
+    animation-range: entry 0% cover 50%;
+    animation-duration: 1s; 
 }
+
+
