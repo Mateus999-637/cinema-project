@@ -6,7 +6,7 @@
 
 
 body {
-    background-image: linear-gradient(to bottom,rgb(57, 2, 2), black );
+    background-color: black;
     background-size: cover;
     height: 100vh; 
 }
@@ -60,7 +60,14 @@ main {
     background-color: rgb(237, 12, 0);
 }
 
-.banner_film{
+.conteinerdosfilmes{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;   
+}
+
+
+ .banner_film{
     color: white;
     width: 200px;
     background-color: transparent;
@@ -72,31 +79,29 @@ main {
     gap: 50px;
 }
 
-.banner_film img{
-    margin-bottom: 12px;
-}
 
 .banner_film p{
     text-align: center;
     padding: 10%;
 }
 
+.banner_film h3{
+    text-align: center;
+}
+
+.banner_film img{
+    width: 180px;
+    height: 240px;
+    border-radius: 8px;
+    box-shadow: 5px 5px 5px black;
+}
+    
 .banner_film button{
     background-color: red;
     color: white;
     border-radius: 5px;
     padding: 10px;
     width: 100px;
-    border: none;
+    border: 1px, black;
 }
-
-
-.banner_film h3{
-    text-align: center;
-}
-
-
-
-
-    
 
