@@ -7,6 +7,9 @@
     box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth ;
+}
 
 nav {
   display: grid;
@@ -95,13 +98,14 @@ nav {
     gap: 30px;
 }
 
-.buttons-hero > button {
+.buttons-hero > a {
 
     border-radius: 50px;
     padding: 30px 70px;
     font-size: 18px;
     font-family: MontSerrat;
     color: #FFF;
+    text-decoration: none;
 
 }
 
@@ -117,8 +121,7 @@ nav {
 
 .catalog {
     background-color: black;
-    height: 700px;
-    padding: 120px 100px;
+    padding: 280px 100px 50px 100px;
 }
 
 .catalog > h1 {
@@ -144,12 +147,21 @@ nav {
     width: 250px;
 }
 
+
+.info-caption {
+    color: #cecece;
+    font-family: Lexend;
+    font-size: 15px;
+    margin-top: 15px;
+
+}
+
 .img-caption {
     width: 100%;
     color: #ffffff;
     font-family: Lexend;
     font-size: 22px;
-    margin-top: 30px;
+    margin-top: 14px;
     line-height: 1.4;
     
 }
@@ -164,4 +176,24 @@ nav {
     height: 320px;
     object-fit: cover;
     display: block;
+}
+
+@keyframes animacao {
+
+    from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+    to {
+    opacity: 1;
+    transform: translateY(0);
+  }  
+
+}
+
+.scroll-text, .slide-container  {
+    animation: animacao linear both;
+    animation-timeline: scroll();
+    animation-range: entry 0% entry 100%;
+
 }
