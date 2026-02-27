@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Onest:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
 * {
     margin: 0;
@@ -19,6 +21,10 @@ nav {
   background-color: black;
 
 }   
+
+button, a {
+    cursor: pointer;
+}
 
 .links > a {
     color: white;
@@ -125,20 +131,23 @@ nav {
 
 main {
     background-color: black;
-    padding: 280px 100px 50px 100px;
+    padding: 1px 100px 50px 100px;
 }
 
-.title-catalog, .title-cinema {
+.catalog {
+    margin-top: 280px;
+}
+
+.title-catalog, .title-cinemas {
     color: #FFF;
     font-size: 50px;
     font-family: Lexend;
 }   
 
-.slide-container {
+.slide-container, .slide-container-cinema {
     width: 100%;
     overflow: hidden;
     margin-top: 60px;
-    margin-bottom: 400px;
 }
 
 .slide-wrapper {
@@ -161,7 +170,7 @@ main {
 
 }
 
-.img-caption {
+.img-caption, .title-card-cinema, .parag-card-cinema {
     width: 100%;
     color: #ffffff;
     font-family: Lexend;
@@ -188,15 +197,11 @@ main {
 .img-wrapper:hover {
     transform: scale(1.05);
     transition: margin-bottom ease-in 0.1s;
+    margin-bottom: 20px;
 }
 
 .slide-container:hover {
     overflow: visible;
-}
-
-.img-wrapper:hover {
-    margin-bottom: 20px;
-
 }
 
 
@@ -213,14 +218,126 @@ main {
 
 }
 
-.title-catalog,
-.slide-container {
+.catalog,.cinemas {
     animation-name: animacao;
     animation-timing-function: linear;
     animation-fill-mode: both;
-    animation-timeline: scroll();
+    animation-timeline: view();
     animation-range: entry 0% cover 50%;
     animation-duration: 1s; 
+}
+
+
+.cinemas {
+    margin-top: 280px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.title-cinemas {
+    text-align: center;
+}
+
+.slide-container-cinema {
+    display: flex;
+    justify-content: center;
+    margin-top: 70px;
+}
+
+.slide-cinema {
+    width: 600px;
+    height: auto;
+    background-color: #111111;
+    padding-bottom: 30px;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform ease 0.2s;
+
+}
+
+.slide-cinema:hover {
+    transform: scale(1.01);
+}
+
+
+.title-card-cinema {
+    font-size: 30px;
+    margin-top: 30px;
+    font-weight: bold;
+    font-family: "Montserrat";
+}
+
+.parag-card-cinema {
+    font-size: 18px;
+    margin-top: 30px;
+    color: #AAAAAA;
+}
+
+
+.btn-programacao-cinema {
+    padding: 20px 60px;
+    border: 2px solid #E50914;
+    color: #E50914;
+    font-size: 17px;
+    border-radius: 50px;
+    transition: background-color ease-in 0.1s;
+    font-family: "Onest";
+    font-weight: 400;
+    background-color: rgba(255, 255, 255, 0);
+}
+
+.btn-programacao-cinema:hover {
+    background-color: red;
+    color: white;
+
+}
+
+.btns-tags{
+    display: flex;
+    gap: 10px;
+}
+
+.div-btns-cinema {
+    margin-top: 65px;
+    display: flex;
+    align-items: flex-start; 
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 30px;
+    
+}
+
+.btn-tags-cinema {
+    border: none;
+    background-color: #252525;
+    border-radius: 5px;
+    color: #FFF;
+    font-family: "Inter";
+    font-weight: 600;
+    font-size: 14px;
+    padding: 5px 10px;
+    transition: background-color ease-in 0.1s;
+}
+
+.btn-tags-cinema:hover {
+    background-color: #FFF;
+    color: black;
+}
+
+.img-wrapper-cinema {
+    background-image: 
+    linear-gradient(to bottom, transparent 50% , #111111 ), 
+    url("/src/frontend/img/inicio-images/cinemind-cinema1.png");
+    object-fit: cover;
+    background-size: 100% 100%;
+    height: 370px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.texts-cinema {
+    padding: 0px 30px;
 }
 
 
