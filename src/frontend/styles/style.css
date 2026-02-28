@@ -134,11 +134,11 @@ main {
     padding: 1px 100px 50px 100px;
 }
 
-.catalog {
+.catalog, .cinemas, .sobre{
     margin-top: 280px;
 }
 
-.title-catalog, .title-cinemas {
+.title-catalog, .title-cinemas, .title-sobre {
     color: #FFF;
     font-size: 50px;
     font-family: Lexend;
@@ -150,7 +150,7 @@ main {
     margin-top: 60px;
 }
 
-.slide-wrapper {
+.slide-wrapper, .slide-wrapper-cinema {
     display: flex; 
     list-style: none;
     padding: 0px;
@@ -170,7 +170,7 @@ main {
 
 }
 
-.img-caption, .title-card-cinema, .parag-card-cinema {
+.img-caption, .title-card-cinema, .parag-card-cinema, .parag-sobre {
     width: 100%;
     color: #ffffff;
     font-family: Lexend;
@@ -218,7 +218,7 @@ main {
 
 }
 
-.catalog,.cinemas {
+section {
     animation-name: animacao;
     animation-timing-function: linear;
     animation-fill-mode: both;
@@ -229,7 +229,6 @@ main {
 
 
 .cinemas {
-    margin-top: 280px;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -239,27 +238,25 @@ main {
     text-align: center;
 }
 
+.slide-wrapper-cinema {
+    gap: 50px;
+}
+
 .slide-container-cinema {
     display: flex;
     justify-content: center;
+    align-items: center;
     margin-top: 70px;
 }
 
 .slide-cinema {
-    width: 600px;
+    width: 500px;
     height: auto;
     background-color: #111111;
     padding-bottom: 30px;
     border-radius: 10px;
     overflow: hidden;
-    transition: transform ease 0.2s;
-
 }
-
-.slide-cinema:hover {
-    transform: scale(1.01);
-}
-
 
 .title-card-cinema {
     font-size: 30px;
@@ -288,9 +285,8 @@ main {
 }
 
 .btn-programacao-cinema:hover {
-    background-color: red;
+    background-color: #E50914;
     color: white;
-
 }
 
 .btns-tags{
@@ -331,7 +327,7 @@ main {
     url("/src/frontend/img/inicio-images/cinemind-cinema1.png");
     object-fit: cover;
     background-size: 100% 100%;
-    height: 370px;
+    height: 300px;
     background-repeat: no-repeat;
     background-position: center;
 }
@@ -340,4 +336,75 @@ main {
     padding: 0px 30px;
 }
 
+.mark {
+    width: 50px;
+    display: flex;
+    border: 2px solid red;
+    margin-bottom: 30px;
+}
 
+.container-sobre {
+    display: grid;
+    grid-template-columns: 1.3fr 1fr;
+    place-items: center;
+    gap: 40px;
+}
+
+.highlight {
+    color: red;
+    font-style: italic;
+    transition: transform ease 0.2s;
+    
+}
+
+.highlight:hover {
+    text-shadow: 0 0 5px #ff000000, 0 0 10px #ff000000, 0 0 20px;
+
+}
+
+.parag-sobre {
+    margin-top: 70px;
+    line-height: 1.7;
+    font-size: 24px;
+    font-weight: 200;
+    font-family: "Inter";
+}
+
+.img-sobre {
+    width: 600px;
+    height: auto;
+    object-fit: cover;
+}
+
+.img-sobre > img {
+    width: 100%;
+    border-radius: 10px;
+
+}
+
+hr {
+    border: 1px solid rgb(32, 32, 32);
+    margin-top: 90px;
+}
+
+.numbers-sobre {
+    display: flex;
+    gap: 200px;
+    margin-top: 70px;
+}
+
+.numbers {
+    color: red;
+    font-family: "Montserrat";
+    font-size: 50px;
+    font-weight: 700;
+}
+
+.numbers-info {
+    margin-top: 20px;
+    font-family: "Montserrat";
+    font-size: 20px;
+    color: white;
+    font-weight: 200;
+    letter-spacing: 3px;
+}
