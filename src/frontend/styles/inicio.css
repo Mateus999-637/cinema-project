@@ -13,6 +13,7 @@ html {
   scroll-behavior: smooth ;
 }
 
+
 nav {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -24,6 +25,7 @@ nav {
 
 button, a {
     cursor: pointer;
+    display: block;
 }
 
 .links > a {
@@ -131,7 +133,7 @@ button, a {
 
 main {
     background-color: black;
-    padding: 1px 100px 50px 100px;
+    padding: 1px 100px 250px 100px;
 }
 
 .title-catalog, .title-cinemas, .title-sobre, .title-exp {
@@ -410,6 +412,7 @@ hr {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     gap: 50px;
+    margin-top: 160px;
 }
 
 .exp-container {
@@ -454,6 +457,129 @@ hr {
     flex-direction: column;
 }
 
-.imgs-exp {
-    margin-top: 90px;
+footer {
+    width: 100%;
+    border-top: 2px solid #e5091444;
+    height: 700px;
+    background-color: #030000;
+    padding: 0px 70px;
+}
+
+.main-title-footer {
+    display: flex;
+    flex-direction: column;
+    width: min-content;
+}
+
+.main-title-footer > h2 {
+    font-size: 40px;
+    color: #FFF;
+    margin-top: 50px;
+    font-family: "Montserrat";
+    letter-spacing: 10px;
+}
+
+.main-parag-footer, .parag-footer {
+    font-size: 20px;
+    color: #c7dbec;
+    margin-top: 50px;
+    font-family: "Inter";
+    line-height: 1.7;
+    font-weight: 400;
+
+}
+
+.container-footer {
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    gap: 20px;
+    align-content: center;
+    margin-top: 100px;
+}
+
+.title-footer {
+    color: #E50914;
+    font-family: "Montserrat";
+    letter-spacing: 2px;
+    font-size: 17px;
+}
+
+.parags-footer {
+    margin-top: 45px;
+}
+
+.parag-footer {
+    margin-top: 30px;
+}
+
+.container-newsletter-footer {
+    width: 400px;
+}
+
+.forms-footer {
+    margin-top: 25px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.input-footer, .button-footer {
+    border: none;
+    height: 65px;
+    border-radius: 10px;
+    padding: 10px 20px;
+    font-family: "Inter";
+    font-weight: medium;
+
+}
+
+.input-footer {
+    font-size: 20px;
+    background-color: #1A1A1A;
+    border: 1px solid #d6d6d60e;
+    transition: border-color ease 0.2s;
+}
+
+.input-footer:focus {
+    border-width: 2px;
+    border-color: #E50914;
+    outline: none;
+}
+
+.button-footer {
+    background-color: #E50914;
+    margin-top: 15px;
+    font-size: 20px;
+    font-weight: bolder;
+}
+
+.copyright-footer {
+    font-family: "Inter";
+    color: #AAAAAA;
+    letter-spacing: 1px;
+    font-size: 18px;
+}
+
+.imgs-containers-final-footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.img-container-final-footer {
+    width: 48px;
+    object-fit: cover;
+    margin-top: 20px;
+}
+
+.img-container-final-footer > img {
+    width: 100%;
+}
+
+.final-footer {
+    margin-top: 180px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
