@@ -19,7 +19,6 @@
     body {
         background-color: black;
         background-size: cover;
-        height: 100vh; 
     }
 
     main {
@@ -30,36 +29,43 @@
 
     .principal{
         color: white;
-        text-align: center;
+        text-align: left;
         margin-top: 10px;
     }
 
-    .principal h1{
+
+    .ajuste{
+      padding: 10px;
+    }
+
+  
+    .principal > h1{
         font-family: 'Montserrat';
         font-size: 50px;
         margin-bottom: 5px;
     }
 
-    .principal p{
+    .principal > p{
+        color: rgb(255, 227, 227);
         font-size: 16px;
-        color: rgb(218, 208, 208);
+        font-weight: 700;
+        
     }
 
     .opcoes button{
         width: 80px;
-        background-color: #a59898;
+        background-color: #000000;
+        font-family: 'Montserrat';
+        font-weight: 600;
         border: none;
         border-radius: 10px;
         padding: 7px;
-        margin-left: 1px;
-        background: transparent;
-        border-radius:2px 2px 2px rgba(0, 0, 0, 0.444);
-        cursor: pointer;
     }
 
     .opcoes{
-        text-align: center;
-        margin-top: 20px;
+        text-align: left;
+        margin-top: 10px;
+        padding: 7px;
     }
 
     .opcoes a {
@@ -69,8 +75,16 @@
 
     .opcoes button:hover{
         background-color: rgb(237, 12, 0);
+        box-shadow: 2px 1px 2px black;
     }
 
+    .background {
+      background-color: rgba(255, 108, 108, 0.21);
+      width: 100%;
+      padding: 23px;
+      border-radius: 0px 10px;
+      
+    }
 
     .container {
         max-width: 1400px;
@@ -89,8 +103,9 @@
     .conteinerdosfilmes {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-      gap: 35px;
+      gap: 50px;
       margin-top: 40px;
+      padding: 1.5rem;
     }
 
     .cards {
@@ -102,6 +117,9 @@
       cursor: pointer;
     }
 
+    .cards img {
+      object-fit: cover;
+    }
     .cards:hover {
       z-index: 2;
       box-shadow: 0 7px 10px rgb(244, 116, 31);
@@ -137,8 +155,10 @@
     }
 
     .meta span {
+        color: #ff0000;
         font-family: 'Montserrat';
-        color: #fc742b;
+        font-weight: 500;
+        margin-bottom: 20px;
     }
 
     .rating {
@@ -153,6 +173,7 @@
       font-size: 0.75rem;
       text-transform: uppercase;
     }
+
 
     div span {
         color: white;
@@ -185,13 +206,13 @@
     .details{
         color: white;
         font-family: 'Montserrat';
-        font-weight: 600;
-        justify-content: center;
+        font-weight: 500;
+        display: block;
+        margin: 0 auto;
         background-color: #333;
         border: none;
         border-radius: 10px;
-        margin-top: 10px;
+        margin-top: 30px;
         width: 120px;
-        padding: 10px;
-
+        padding: 8px;
     }
