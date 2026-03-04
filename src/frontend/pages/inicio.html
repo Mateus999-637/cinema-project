@@ -11,12 +11,12 @@
         <a class="img-nav" href="inicio.html">
             <img src="/src/frontend/img/inicio-images/cinemind-logo-nav.jpg" alt="inicio">
         </a>
-        <div class="links">
-            <a href="#">INICIO</a>
-            <a href="filmes.html">FILMES</a>
-            <a href="#cinemas">CINEMAS</a>
-            <a href="#">PROGRAMAÇÃO</a>
-        </div>
+        <ul class="links">
+            <li><a href="#">INICIO</a></li>
+            <li><a href="filmes.html">FILMES</a></li>
+            <li><a href="#cinemas">CINEMAS</a></li>
+            <li><a href="#">PROGRAMAÇÃO</a></li>
+        </ul>
         <div class="icons-nav">
             <a href="#">
                 <img src="/src/frontend/icons/search-icon.png" alt="search">
@@ -24,6 +24,20 @@
             <a href="#">
                 <img src="/src/frontend/icons/user-icon.png" alt="user">
             </a>
+        </div>
+        <div class="menu-toggle">
+            <a href="" aria-label="Abrir menu">
+                <img src="/src/frontend/icons/menu-icon.png" alt="">
+            </a>
+        </div>
+        <!-- sidebar para mobile -->
+        <div class="sidebar" aria-hidden="true">
+            <ul class="links">
+                <li><a href="#">INICIO</a></li>
+                <li><a href="filmes.html">FILMES</a></li>
+                <li><a href="#cinemas">CINEMAS</a></li>
+                <li><a href="#">PROGRAMAÇÃO</a></li>
+            </ul>
         </div>
     </nav> 
     <header class="hero">
@@ -261,28 +275,29 @@
         <div class="final-footer">
             <p class="copyright-footer">&copy; 2026 CineMind. Todos os direitos reservados.</p>
                 <div class="imgs-containers-final-footer">
-                    <a href="#">
                         <div class="img-container-final-footer">
-                            <img src="/src/frontend/icons/twitter-icon.png" alt="twitter">
+                            <a href="">
+                                <img src="/src/frontend/icons/twitter-icon.png" alt="twitter">
+                            </a>
                         </div>
-                    </a>
-                    <a href="#">
                         <div class="img-container-final-footer">
-                            <img src="/src/frontend/icons/youtube-icon.png" alt="youtube">
+                            <a href="">
+                                <img src="/src/frontend/icons/youtube-icon.png" alt="youtube">
+                            </a>
                         </div>
-                    </a>
-                    <a href="#">
                         <div class="img-container-final-footer">
-                            <img src="/src/frontend/icons/linkedin-icon.png" alt="linkedin">
+                            <a href="">
+                                <img src="/src/frontend/icons/linkedin-icon.png" alt="linkedin">
+                            </a>
                         </div>
-                    </a>
-                    <a href="#">
                         <div class="img-container-final-footer">
-                            <img src="/src/frontend/icons/facebook-icon.png" alt="facebook">
+                            <a href="">
+                                <img src="/src/frontend/icons/facebook-icon.png" alt="facebook">
+                            </a>
                         </div>
-                    </a>
                 </div>
         </div>
     </footer>
+    <script src="../../backend/script.js"></script>
 </body>
 </html>
