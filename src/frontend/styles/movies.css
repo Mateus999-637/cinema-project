@@ -6,57 +6,95 @@
       --text-light: #b3b3b3;
     }
 
+
     @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap');
 
 
-    *{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    }
 
 
-    body {
-        background-color: black;
-        background-size: cover;
-    }
-
-    main {
-        font-family: Arial, Helvetica, sans-serif;
-        font-size: 15px;
-    }
+      *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      }
 
 
-    nav{
-    background-color: rgba(148, 125, 109, 0.104);
-    top: 0; left: 0; right: 0;
-    z-index: 100;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 30px;
-    }
+
+
+      body {
+          background-color: rgb(8, 8, 8);
+          background-size: cover;
+      }
+
+
+      main {
+          font-family: Arial, Helvetica, sans-serif;
+          font-size: 15px;
+      }
+
+
+
+
+      nav{
+      background-color: rgb(0, 0, 0);
+      font-family: 'Montserrat';
+      font-weight:  bold;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 23px;
+      }
+
 
       .main-text{
         color: white;
       }
 
-    
+
+      .main-text h1 > span {
+        color: red;
+      }
+
+
+   
     .btn-ingressos{
       text-align: right;
     }
 
+
     .btn-ingressos > button {
+      font-family: 'Montserrat';
+      font-weight: 700;
       background-color: red;
       color: white;
       border: none;
       border-radius: 8px;
-      padding: 8px;
+      padding: 10px;
+      max-width: 17dvw;
     }
-    
+
+
+    .btn-ingressos > span {
+      display: flexbox;
+
+
+    }
+   
     .links > a{
+      color: #cccccc;
+      font-size: large;
       text-decoration: none;
+      margin-left: 15px;
+      transition: 0.2s;
     }
+
+
+    .links > a:hover{
+      color: red;
+    }
+
 
     .principal{
         color: white;
@@ -65,16 +103,20 @@
     }
 
 
+
+
     .ajuste{
       padding: 10px;
     }
 
-  
+
+ 
     .principal > h1{
         font-family: 'Montserrat';
         font-size: 50px;
         margin-bottom: 5px;
     }
+
 
     .principal > p{
         color: rgb(255, 227, 227);
@@ -83,13 +125,15 @@
         margin-top: 15px;
     }
 
+
     .principal span{
       color: red;
     }
 
+
     .opcoes button{
         width: 80px;
-        background-color: #000000;
+        background-color: #00000050;
         font-family: 'Montserrat';
         font-weight: 600;
         border: none;
@@ -97,28 +141,35 @@
         padding: 7px;
     }
 
+
     .opcoes{
         text-align: left;
         margin-top: 10px;
         padding: 7px;
     }
 
+
     .opcoes a {
         text-decoration: none;
         color: white;
     }
 
+
     .opcoes button:hover{
-        background-color: rgb(237, 12, 0);
+        background-color: rgb(255, 0, 0);
         box-shadow: 2px 1px 2px black;
     }
 
+
     .buttons-selection{
+      display: flex;
+      margin-top: 10px;
       padding: 10px;
-      
+     
     }
 
-    .btn-prog > button{
+
+    #btn-prog > button{
       font-family: 'Montserrat';
       font-weight: 600;
       background-color: rgba(255, 0, 0, 0.981);
@@ -129,30 +180,37 @@
       margin-bottom: 15px;
     }
 
-    .btn-hours > button{
+
+    #btn-hours > button{
+      color: white;
+      background-color: rgba(0, 0, 0, 0.279);
       font-family: 'Montserrat';
       font-weight: 600;
-      background-color: rgba(0, 0, 0, 0.279);
-      color: white;
       padding: 10px;
+      margin-left: 15px;
       border: none;
       border-radius: 10px;
     }
 
+
     .background {
       background:linear-gradient(0deg,   rgba(10,10,15,1)  0%,  rgba(10,10,15,.2) 60%, transparent 100%),
-      linear-gradient(90deg,  rgba(10,10,15,.9)  0%,  transparent 60%), url(https://wallpapers-clan.com/wp-content/uploads/2025/02/luffy-red-glow-eyes-dark-pc-wallpaper-preview.jpg);
+      linear-gradient(90deg,  rgba(10,10,15,.9)  0%,  transparent 60%), url(https://wallpapers-clan.com/wp-content/uploads/2024/06/anime-girl-with-sword-red-desktop-wallpaper-preview.jpg);
       background-size: cover;
+      background-position: right center;
+       background-repeat: no-repeat;
       width: 100%;
       height: 400px;
       padding: 23px;
       border-radius: 0px 10px;
     }
 
+
     .container {
         max-width: 1400px;
         margin: 0 auto;
      }
+
 
     h2 {
       color: white;
@@ -163,13 +221,14 @@
       font-family: 'Montserrat';
     }
 
+
     .conteinerdosfilmes {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
       gap: 50px;
-      margin-top: 40px;
       padding: 1.5rem;
     }
+
 
     .cards {
       position: relative;
@@ -180,7 +239,10 @@
       cursor: pointer;
     }
 
+
     .cards img {
+      width: 100%;
+      display: block;
       object-fit: cover;
     }
     .cards:hover {
@@ -189,6 +251,7 @@
       transform: scaleZ(0.1);
     }
 
+
     .poster {
       width: 100%;
       height: 320px;
@@ -196,9 +259,11 @@
       display: block;
     }
 
+
     .info {
       padding: 12px 14px;
     }
+
 
     .title {
       text-align: center;
@@ -209,6 +274,7 @@
       margin-bottom: 6px;
       overflow: hidden;
     }
+
 
     .meta {
       display: flex;
@@ -221,6 +287,7 @@
       margin-bottom: 6px;
     }
 
+
     .meta span {
         color: #ff0000;
         font-family: 'Montserrat';
@@ -228,10 +295,12 @@
         margin-bottom: 20px;
     }
 
+
     .rating {
       color: #f5c518;
       font-weight: bold;
     }
+
 
     .genre-tag {
       display: flexbox;
@@ -244,9 +313,12 @@
     }
 
 
+
+
     div span {
         color: white;
     }
+
 
     .badge {
       position: absolute;
@@ -260,6 +332,7 @@
       font-weight: bold;
     }
 
+
     .highlight {
       position: absolute;
       top: 10px;
@@ -271,6 +344,7 @@
       font-size: 0.75rem;
       font-weight: bold;
     }
+
 
     .details{
         color: white;
@@ -286,6 +360,7 @@
         padding: 8px;
     }
 
+
       footer {
         color: white;
       border-top: 1px solid var(--border);
@@ -295,6 +370,7 @@
       justify-content: space-between;
     }
 
+
     .footer-brand {
       color: white;
       font-family: 'Bebas Neue', sans-serif;
@@ -302,6 +378,7 @@
       letter-spacing: 3px;
       color: var(--red);
     }
+
 
     .footer-text {
       font-size: 12px;
